@@ -3,6 +3,17 @@ import java.util.*;
 import java.util.*;
 import javax.swing.*;
 
+import Controllers.AddNumCtrl;
+import Controllers.ResetCtrl;
+import Models.Numbers;
+import Views.AddNumView;
+import Views.CountView;
+import Views.MeanView;
+import Views.MedianView;
+import Views.ModeView;
+import Views.NumbersView;
+import Views.ResetView;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -31,6 +42,11 @@ public class BasicStats {
     NumbersView numbersView = new NumbersView();
     AddNumView addNumView = new AddNumView();
     ResetView resetView = new ResetView();
+    //Min view
+    MinView minView = new MinView();
+    //Max view
+    MaxView maxView = new MaxView();
+
 
     //Create statsView
     ArrayList<View> statsViews = new ArrayList<View>();
@@ -38,6 +54,11 @@ public class BasicStats {
     statsViews.add(medianView);
     statsViews.add(meanView);
     statsViews.add(modeView);
+    //minview
+    statsViews.add(minView);
+    //maxview
+    statsViews.add(maxView);
+
 
     /***** REGISTER MVC BLOCK *****/
 
